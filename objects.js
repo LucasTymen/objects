@@ -33,3 +33,13 @@ let returnAnyProp = (objectName, propName) => objectName[propName];
 console.log(returnAnyProp(spaceshipé, "homePlanet"));
 
 console.log(isActive)
+
+// #################### Property Assignment ####################
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth',
+  color: 'silver',
+  'Secret Mission' : 'Discover life outside of Earth.'
+};
+
+// Write your code below

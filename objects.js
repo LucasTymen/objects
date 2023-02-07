@@ -1,20 +1,21 @@
+
 // Introduction to Objects
 
 // Basics - construction of an object
-let fasterShip = {color: 'silver', 'Fuel Type': 'Turbo Fuel'};
+let fasterShip = { color: "silver", "Fuel Type": "Turbo Fuel" };
 
 // Accessing Properties wit dot access ()
 let spaceship = {
-  homePlanet: 'Earth',
-  color: 'silver',
-  'Fuel Type': 'Turbo Fuel',
+  homePlanet: "Earth",
+  color: "silver",
+  "Fuel Type": "Turbo Fuel",
   numCrew: 5,
-  flightPath: ['Venus', 'Mars', 'Saturn']
+  flightPath: ["Venus", "Mars", "Saturn"],
 };
 
 // Write your code below
-let crewCount = spaceship.numCrew = {};
-let planetArray = spaceship.flightPath = {}
+let crewCount = (spaceship.numCrew = {});
+let planetArray = (spaceship.flightPath = {});
 
 // #################### Bracket Notation ####################
 let spaceshipé = {
@@ -32,7 +33,7 @@ let isActive = spaceshipé["Active Mission"];
 let returnAnyProp = (objectName, propName) => objectName[propName];
 console.log(returnAnyProp(spaceshipé, "homePlanet"));
 
-console.log(isActive)
+console.log(isActive);
 
 // #################### Property Assignment ####################
 let spaceship3 = {
@@ -53,7 +54,6 @@ console.log(spaceship3);
 console.log("###### delete ######");
 delete spaceship3["Secret Mission"];
 console.log(spaceship3);
-
 
 // #################### METHOD ####################
 let retreatMessage =
@@ -89,3 +89,5 @@ let  alienShip2 = {
 alienShip2.invade2(); // Prints 'Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.'
 
 */
+
+// #################### Nested Objects ####################

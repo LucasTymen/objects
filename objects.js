@@ -82,12 +82,106 @@ let variableName2 = {
 
 let  alienShip2 = {
   invade2 () {
-    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+    console.log('Hello! We have come to dominate your planet. Instead of Earth,
+    it shall be called New Xaculon.')
   };
 };
 
-alienShip2.invade2(); // Prints 'Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.'
+alienShip2.invade2(); // Prints 'Hello! We have come to dominate your planet.
+Instead of Earth, it shall be called New Xaculon.'
 
 */
 
 // #################### Nested Objects ####################
+/*
+In application code, objects are often nested— an object might have another
+object as a property which in turn could have a property that’s an array of
+even more objects!
+
+In our spaceship object, we want a crew object. This will contain all the crew
+members who do important work on the craft. Each of those crew members are
+objects themselves. They have properties like name, and degree, and they each
+have unique methods based on their roles. We can also nest other objects in the
+spaceship such as a telescope or nest details about the spaceship’s computers
+inside a parent nanoelectronics object.
+
+let spaceship = {
+  passengers: [{name: 'Buck Rogers'},{name: 'Flash Gordon'}],
+  telescope: {
+    yearBuilt: 2018,
+    model: "91031-XLT",
+    focalLength: 2032,
+  },
+  crew: {
+    captain: {
+      name: "Sandra",
+      degree: "Computer Engineering",
+      encourageTeam() {
+        console.log("We got this!");
+      },
+      "favorite foods": ["cookies", "cakes", "candy", "spinach"],
+    },
+  },
+  engine: {
+    model: "Nimbus2000",
+  },
+  nanoelectronics: {
+    computer: {
+      terabytes: 100,
+      monitors: "HD",
+    },
+    "back-up": {
+      battery: "Lithium",
+      terabytes: 50,
+    },
+  },
+};
+
+let capFave = spaceship.crew.captain['favorite foods'][0]
+let firstPassenger = spaceship.passengers[0]
+*/
+
+// #################### Pass By Reference ####################
+/*
+Objects are passed by reference. This means when we pass a variable assigned to
+an object into a function as an argument, the computer interprets the parameter
+name as pointing to the space in memory holding that object. As a result,
+functions which change object properties actually mutate the object permanently
+(even when the object is assigned to a const variable).
+
+for exemple :
+
+const spaceship = {
+  homePlanet : 'Earth',
+  color : 'silver'
+};
+
+let paintIt = obj => {
+  obj.color = 'glorious gold'
+};
+
+paintIt(spaceship);
+
+spaceship.color // Returns 'glorious gold'
+
+// excercise
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth'
+};
+
+// Write your code below
+let greenEnergy = spaceship => {
+  spaceship['Fuel Type'] = 'avocado oil';
+};
+
+let remotelyDisable = obj => {
+  obj.disabled = true
+}
+
+greenEnergy(spaceship)
+remotelyDisable(spaceship)
+
+console.log(spaceship)
+
+*/
